@@ -1,5 +1,7 @@
-# python-systemd-http-server
-A simple Python HTTP Server that serves static content and can be deployed as a Systemd Service
+# python-http-server
+A simple Python HTTP Server that serves static content
+There are several ways that this small application can be run:
+
 ### Running as a Systemd Service
 - In the [Service File](python-systemd-http-server), change the `User` property to the user that is going to be running the server, the default is jenkins:
 	```systemd
@@ -18,3 +20,10 @@ A simple Python HTTP Server that serves static content and can be deployed as a 
 	```bash
 	http://localhost:9000
 	```
+
+### Running in a Docker container
+- Build the docker image and run the container:
+```shell
+make docker_up
+```
+
