@@ -16,7 +16,7 @@ systemd_uninstall:
 	@rm -rf ${SERVICE_SCRIPT}
 
 docker_up:
-	@docker build -t bobcrutchley/${NAME} .
+	@docker build -t bobcrutchley/${NAME}:latest .
 	@docker run -d -p 9000:9000 --name ${NAME} bobcrutchley/${NAME} 
 
 docker_destroy:
